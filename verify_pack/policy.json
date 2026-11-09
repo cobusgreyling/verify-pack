@@ -1,0 +1,28 @@
+{
+  "rules": [
+    {
+      "id": "claim.tests_without_command",
+      "severity": "medium",
+      "title": "Tests claimed and no test command was run",
+      "when": { "requires": ["claim.tests_passed", "claim.test_command"] }
+    },
+    {
+      "id": "claim.build_without_command",
+      "severity": "medium",
+      "title": "Build claimed and no build command was run",
+      "when": { "requires": ["claim.build_passed", "claim.build_command"] }
+    },
+    {
+      "id": "claim.commit_without_command",
+      "severity": "high",
+      "title": "Commit claimed and no git commit was run",
+      "when": { "requires": ["claim.committed", "claim.commit_command"] }
+    },
+    {
+      "id": "claim.push_without_command",
+      "severity": "high",
+      "title": "Push claimed and no git push was run",
+      "when": { "requires": ["claim.pushed", "claim.push_command"] }
+    }
+  ]
+}

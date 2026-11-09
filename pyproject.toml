@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "verify-pack"
+version = "0.1.0"
+description = "atif-scan pack for completion claims a coding agent makes without an earlier successful command."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Cobus Greyling" }]
+keywords = ["ai-agents", "atif", "atif-scan", "coding-agents"]
+dependencies = ["atif-scan>=0.8.21"]
+
+[project.urls]
+Homepage = "https://github.com/cobusgreyling/verify-pack"
+Repository = "https://github.com/cobusgreyling/verify-pack"
+
+[project.scripts]
+verify-pack = "verify_pack.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["verify_pack*"]
+
+[tool.setuptools.package-data]
+verify_pack = ["policy.json"]

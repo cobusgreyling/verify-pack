@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>verify-pack</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      width: 1600px;
+      height: 720px;
+      background: #f3ecdf;
+      overflow: hidden;
+    }
+    .frame {
+      width: 1600px;
+      height: 720px;
+      padding: 64px 72px 56px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .eyebrow {
+      margin: 0;
+      font-family: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      color: #9c4d2b;
+    }
+    h1 {
+      margin: 18px 0 0;
+      max-width: 760px;
+      font-family: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+      font-weight: 500;
+      font-size: 84px;
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+      color: #1b1916;
+    }
+    .deck {
+      margin: 28px 0 0;
+      max-width: 640px;
+      font-family: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 26px;
+      line-height: 1.35;
+      color: #3c3832;
+    }
+    .mark {
+      margin-top: 36px;
+      font-family: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #6b645c;
+    }
+    .card {
+      background: #fffaf3;
+      border: 1px solid #e2d8c8;
+      border-radius: 28px;
+      padding: 28px 32px 12px;
+      box-shadow: 0 18px 50px rgba(60, 40, 20, 0.06);
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      padding: 22px 0;
+      border-top: 1px solid #eadfcf;
+    }
+    .row:first-child { border-top: 0; }
+    .said {
+      margin: 0;
+      font-family: "Iowan Old Style", Palatino, Georgia, serif;
+      font-size: 32px;
+      line-height: 1;
+      color: #1b1916;
+    }
+    .cmd {
+      margin: 8px 0 0;
+      font-family: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+      font-size: 18px;
+      color: #6b645c;
+    }
+    .pill {
+      font-family: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 650;
+      letter-spacing: 0.04em;
+      padding: 8px 14px;
+      border-radius: 999px;
+    }
+    .backed { color: #1f6b45; background: #e5f2ea; }
+    .medium { color: #9c4d2b; background: #f8e6da; }
+    .high { color: #7a1f2b; background: #f8e0e3; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div>
+      <p class="eyebrow">VERIFY-PACK</p>
+      <h1>The sentence is not the run.</h1>
+      <p class="deck">A completion claim counts only when an earlier command succeeded.</p>
+      <p class="mark">an atif-scan plugin</p>
+    </div>
+    <div class="card">
+      <div class="row">
+        <div>
+          <p class="said">Tests passed.</p>
+          <p class="cmd">pytest -q</p>
+        </div>
+        <span class="pill backed">backed</span>
+      </div>
+      <div class="row">
+        <div>
+          <p class="said">Tests passed.</p>
+          <p class="cmd">no command</p>
+        </div>
+        <span class="pill medium">medium</span>
+      </div>
+      <div class="row">
+        <div>
+          <p class="said">Pushed.</p>
+          <p class="cmd">no git push</p>
+        </div>
+        <span class="pill high">high</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

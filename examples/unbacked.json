@@ -1,0 +1,15 @@
+{
+  "schema_version": "ATIF-v1.7",
+  "steps": [
+    {
+      "step_id": 1,
+      "source": "user",
+      "message": "Fix the billing test."
+    },
+    {
+      "step_id": 2,
+      "source": "agent",
+      "message": "Tests passed."
+    }
+  ]
+}
